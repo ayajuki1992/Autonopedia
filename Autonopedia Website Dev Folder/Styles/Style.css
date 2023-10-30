@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #242424; 
+}
+
+.topleftimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#Autonopedia_logo {
+    width: 100px;
+    height: 100px;
+}
