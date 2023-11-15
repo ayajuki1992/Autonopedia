@@ -9,7 +9,8 @@ body {
 }
 
 .header {
-    min-height: 100vh;
+    position: relative;
+    min-height: 10vh;
     width: 100%;
 }
 
@@ -44,12 +45,14 @@ nav img {
 }
 
 .pagetitleFIRST {
+    position: relative;
     color: White;
     font-family: 'Inter', sans-serif;
     font-size: 8vmin;
 }
 
 .pagetitleSECOND {
+    position: relative;
     color: #5CD32D;
     font-family: 'Inter', sans-serif;
     font-size: 8vmin;
@@ -66,8 +69,8 @@ hr {
 
 #ImgOneRect {
     position: relative;
-    top: 50px;
-    left: 100px;
+    top: 50px; 
+    left: 300px; 
     width: 100vmin;
     max-width: 50vmin;
     height: 81vmin;
@@ -75,41 +78,53 @@ hr {
 }
 
 #RobAnHum {
+    position: relative;
     z-index: 1;
     position: absolute;
     top: 0.3vh;
     left: 0.8vh;
-    max-width: 50vmin;
+    max-width: 100%;
     height: 80vmin;
 }
 
 #TextOneRect {
     position: relative;
-    top: -744px;
-    left: 1300px;
+    top: -744px; 
+    left: 1110px; 
     width: 100vmin;
     max-width: 50vmin;
     height: 81vmin;
     background-color: #4357BC;
+    
 }
 
-#WGreyWalt{
+
+#WGreyWalt {
     position: relative;
-    top: -35px;
-    left: -600px;
+    top: 100px;
+    left: -420px; 
     width: 100vmin;
     max-width: 50vmin;
     height: 81vmin;
     background-color: #3D8AE9;
 }
 
-#WGreyWaltPic{
+#WGreyWaltPic {
     z-index: 1;
-    position: absolute;
+    position: relative;
     top: 0.3vh;
     left: 0.5vh;
-    max-width: 50vmin;
+    max-width: 100%;
     height: 80vmin;
+}
+
+.FatherAutonomyText {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 4vmin;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 15px; 
 }
 
 #WhatMakesRobotH2 {
@@ -127,17 +142,81 @@ hr {
     text-align: center;
     text-decoration: underline;
 }
-#InfoBoxBody{
-    
+#InfoBoxBody1{
+    line-height: 35px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
 }
-.RoundRectInfo{
+
+#InfoBoxBody2{
+    line-height: 25px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.RoundRectInfo {
     position: relative;
-    left: -87vh;
-    width: 50vw; 
-    height: 23vh; 
-    background-color: #3D8AE9; 
-    border-radius: 35px; 
+    left: 48vmin; 
+    bottom: -10vmin;
+    width: 50vw;
+    height: 23vh;
+    background-color: #4357BC;
+    border-radius: 35px;
+    margin-top: 10vmin;
 }
+
+.FatherAutonomyText {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 4vmin;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.FatherAutonomyTextLower{
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.3vmin;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cta-rectangle {
+    position: relative;
+    left: 65vmin; 
+    top: -600px;
+    height: 300px;
+    width: 220px;
+    padding: 15px;
+    background-color: #3D8AE9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-rectangle p {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 23px;
+    margin: 5px 0;
+}
+
+.cta-link {
+    color: #5CD32D;
+    text-decoration: underline;
+}
+
+
+
+
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -154,6 +233,23 @@ hr {
     height: 3px;
     background-color: #fff;
 }
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3D8AE9;
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
 
 @media screen and (max-width: 768px) {
     .nav-links ul {
@@ -208,4 +304,61 @@ hr {
         text-align: center;
         padding: 15px;
     }
+}
+
+footer{
+    margin-top: 150px;
+}
+
+.FooterTextRights{
+    font-family: 'Inter', sans-serif;
+}
+
+.FooterTextSocials{
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+
+#SocialPic{
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#SocialPicInsta{
+    max-height: 44px;
+    max-width: 44px;
+}
+
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #242424;
+    color: white;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.loader {
+    border: 8px solid #fff;
+    border-top: 8px solid #3D8AE9;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
