@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Autonopedia - Exploring the world of robots">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name ="viewport" content=""with-device-width, initial-scale="1.0">
     <title>Autonopedia</title>
     <link rel="stylesheet" href="Styles/Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,27 +14,152 @@
 </head>
 <body>
     <section class="header">
-    <nav>
-        <a href="Index.html"><img src="Images/Autonopedia_logo.png"></a>
-        <div class="nav-links">
-            <ul>
-                <li><a href="Index.html">Home Page</a></li>
-                <li><a href="RobotsAndSociety.html">Robots & Society</a></li>
-                <li><a href="FamousRobots.html">Famous Robots</a></li>
-                <li><a href="ContactUs.html">Contact Us</a></li>
-            </ul>
-
-
-        </div>
-    </nav>
+        <nav>
+            <a href="Index.html"><img src="Images/Autonopedia_logo.png"></a>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <img src="Graphics/HamburgerIcon.png" alt="Hamburger Menu">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="Index.html">Home Page</a></li>
+                    <li><a href="RobotsAndSociety.html">Robots & Society</a></li>
+                    <li><a href="FamousRobots.html">Famous Robots</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
     <hr>
-    <h1 class="text-center">
-        <center> <span class="pagetitleFIRST">Famous</span><span class="pagetitleSECOND"> Robots</span></center>
-     </h1>
-    </section>
+        </section>
 
 
 
+        <section class="body-info">
+            <h1 class="text-center">
+                <center><span class="pagetitleFIRST">Robots in our</span><span class="pagetitleSECOND"> Society</span></center>
+            </h1>
+            <div id="ImgOneRect">
+                <img id="NASARoverPic" src="Images/NASARover.jpeg"alt="NASA_MARS">    
+            </div>
+            <div id="TextOneRect">
+                <h2 id="WhatMakesRobotH2"> What do Robots do in our society?</h2>
+                <p id="InfoBoxBody1">
+                    If you're visitng Autonopedia, you may already know what a robot is. You also may not!
+                    Robots are commonly misconstrued in definition, and it vaies from person to person.
+                    One may think that robots are all autonomous, and might take over the world one day!
+                    However, the informed reader of the Autonopedia website will know that not all robots are autonomous.
+                    Robots are simply computers like any other, that can be programmed to do what we ask.
+                    Mostly, robots just do our menial labour, like on the automotive production lines.
+                    However, robots can be much greater than that!
+                    Robots can be found in the medical field, being operated by skilled surgeons saving lives.
+                    Some robots also scan, process and check out your groceries when you go shopping.
+                    Robots are even found in childrens toys, like robot pets!
+                    Just remembe, when you think "What is a robot?", think "Endless possibilities!".
+                </p>
+                <div id="WGreyWalt">
+                    <img id="WGreyWaltPic" src="Images/WGreyWalt.png" alt="W. Grey Walter">
+                    <p class="FatherAutonomyText">W. Grey Walter</p>
+                    <p class="FatherAutonomyTextLower">The father of Autonomy</p>
+
+                    <div class="cta-rectangle">
+                        <p>Ever wondered how life looks with robots?</p>
+                        <p>Check out our page on robots and society!</p>
+                        <p><a href="RobotsAndSociety.html" class="cta-link">Click me!</a></p>
+                    </div>
+                </div>                
+            </div>
+            <div class="RoundRectInfo">
+                <h2 id="InfoBoxHeader"> Brief overview of Autonomy</h2>
+                <p id="InfoBoxBody2">
+                    Autonomy in robots has been a thoroughly researched area of robotics. W. Grey Walter, commonly hailed as the father of Autonomy, had first discovered this concept with Elmer and Elsie, in 1948.
+                    Those robots helped pave the way for generations worth of work in robotics and autonomy.
+                    In today's day and age, Autonomous robots can be found everywhere you look!
+                    From self-driving delivery robots to robots that work for us in space, there is no shortage of amazing robots around (or above) our world!
+                </p>
+            </div>
+       
+            </div>
+        </section>
+        
+ 
+<div id="scrollToTopBtn">&#9650;</div>
+
+
+
+
+
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const loadingContainer = document.querySelector('.loading-container');
+    
+        loadingContainer.style.opacity = 1;
+    
+        setTimeout(() => {
+            loadingContainer.style.opacity = 0;
+        }, 0);
+    
+        loadingContainer.addEventListener('transitionend', function () {
+            if (loadingContainer.style.opacity === '0') {
+                loadingContainer.style.display = 'none';
+            }
+        });
+    });
+    
+    
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+        window.onscroll = function() {
+            if (document.body.scrollTop > (0.5 * window.innerHeight) || document.documentElement.scrollTop > (0.5 * window.innerHeight)) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+
+    console.log("Script loaded!");
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburgerMenu.addEventListener("click", function () {
+        this.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+});
+
+</script>
 
 </body>
+<div class="loading-container">
+    <div class="loader"></div>
+    <p>Loading...</p>
+</div>
+
+<footer> 
+    <hr>
+    <div id="FootParagraph">
+        <p id="FooterTextRights"> Autonopedia - All rights reserved</p>
+    </div>
+    <div id="FootParagraphSocials">
+        <p id="FooterTextSocials">
+            Also check out our social media!
+        </p>
+        <img id="SocialPic" src="Graphics/Facebook.png" alt="Facebook">
+        <img id="SocialPicInsta" src="Graphics/Instagram.png" alt="Instagram">
+        <img id="SocialPic" src="Graphics/TikTok.png" alt="TikTok">
+        <img id="SocialPic" src="Graphics/Youtube.png" alt="YouTube">
+    </div>
+</footer>
 </html>
