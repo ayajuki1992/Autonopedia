@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Autonopedia - Exploring the world of robots">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name ="viewport" content=""with-device-width, initial-scale="1.0">
     <title>Autonopedia</title>
     <link rel="stylesheet" href="Styles/Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,27 +14,147 @@
 </head>
 <body>
     <section class="header">
-    <nav>
-        <a href="Index.html"><img src="Images/Autonopedia_logo.png"></a>
-        <div class="nav-links">
-            <ul>
-                <li><a href="Index.html">Home Page</a></li>
-                <li><a href="RobotsAndSociety.html">Robots & Society</a></li>
-                <li><a href="FamousRobots.html">Famous Robots</a></li>
-                <li><a href="ContactUs.html">Contact Us</a></li>
-            </ul>
-
-
-        </div>
-    </nav>
+        <nav>
+            <a href="Index.html"><img src="Images/Autonopedia_logo.png"></a>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <img src="Graphics/HamburgerIcon.png" alt="Hamburger Menu">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="Index.html">Home Page</a></li>
+                    <li><a href="RobotsAndSociety.html">Robots & Society</a></li>
+                    <li><a href="FamousRobots.html">Famous Robots</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
     <hr>
-    <h1 class="text-center">
-        <center> <span class="pagetitleFIRST">Burning</span><span class="pagetitleSECOND"> Question?</span></center>
-     </h1>
-    </section>
+        </section>
 
 
 
+        <section class="body-info">
+            <h1 class="text-center">
+                <center><span class="pagetitleFIRST">Burning</span><span class="pagetitleSECOND"> question?</span></center>
+                <!--Code here-->
+                <form id="myForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
+                
+                    <button type="button" onclick="submitForm()">Submit</button>
+            
+                    <p id="successMessage" class="success-message" style="color: White; display: none;">Form submitted successfully.</p>
+                </form>
+
+                <div class="cta-rectangle_contactus">
+                    <p>For any kind of enquiry, you can use this form to contact us.</p>
+                    <p>We hope to hear good things from you. But if not, let us have it, we can take it!</p>
+                </div>
+       
+            </div>
+        </section>
+        
+ 
+<div id="scrollToTopBtn">&#9650;</div>
+
+
+
+
+
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const loadingContainer = document.querySelector('.loading-container');
+    
+        loadingContainer.style.opacity = 1;
+    
+        setTimeout(() => {
+            loadingContainer.style.opacity = 0;
+        }, 0);
+    
+        loadingContainer.addEventListener('transitionend', function () {
+            if (loadingContainer.style.opacity === '0') {
+                loadingContainer.style.display = 'none';
+            }
+        });
+    });
+    
+    
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+        window.onscroll = function() {
+            if (document.body.scrollTop > (0.5 * window.innerHeight) || document.documentElement.scrollTop > (0.5 * window.innerHeight)) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+
+    console.log("Script loaded!");
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburgerMenu.addEventListener("click", function () {
+        this.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+});
+
+
+function submitForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+    var successMessage = document.getElementById("successMessage");
+    successMessage.style.display = "block";
+
+    setTimeout(function() {
+        successMessage.style.display = "none";
+    }, 3000); 
+}
+
+
+</script>
 
 </body>
+<div class="loading-container">
+    <div class="loader"></div>
+    <p>Loading...</p>
+</div>
+
+<footer> 
+    <hr>
+    <div id="FootParagraph">
+        <p id="FooterTextRights"> Autonopedia - All rights reserved</p>
+    </div>
+    <div id="FootParagraphSocials">
+        <p id="FooterTextSocials">
+            Also check out our social media!
+        </p>
+        <img id="SocialPic" src="Graphics/Facebook.png" alt="Facebook">
+        <img id="SocialPicInsta" src="Graphics/Instagram.png" alt="Instagram">
+        <img id="SocialPic" src="Graphics/TikTok.png" alt="TikTok">
+        <img id="SocialPic" src="Graphics/Youtube.png" alt="YouTube">
+    </div>
+</footer>
 </html>
