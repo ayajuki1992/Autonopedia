@@ -1,7 +1,5 @@
 # Autonopedia
-Autonopedia - Autonomous robot encyclopedia (University Website Project)
-Autonopedia is a website that I am making for my University's Website Design & Development module.
 
-Uploading it to GitHub for fun and also for version control. I've never used it before.
+**Autonopedia** is a personal project for my University's Website Design & Development module. It's an encyclopedia dedicated to autonomous robots, and I’m using it to practice web development skills.
 
-Also, totally a newbie to HTML/CSS/JS, so please excuse the horrid programming, tips/hints appreciated!
+I’m uploading it to GitHub for version control and to get feedback. This is my first time using GitHub, and I’m new to HTML, CSS, and JavaScript, so the code might not be perfect. Any tips or suggestions are welcome!
